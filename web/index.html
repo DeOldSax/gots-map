@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>GOTS MAP</title>
+  <meta name="description" content="GOTS MAP">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+  <script src="leaflet-heat.js"></script>
+  <script src="markercluster/leaflet.markercluster.js"></script>
+  <link rel="stylesheet" href="markercluster/MarkerCluster.Default.css" />
+
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+  <link rel="stylesheet" href="bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <a href="https://github.com/DeOldSax/GOTS-MAP/blob/main/geocode.py"><img style="z-index: 9999; position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <button class="mr-3 btn btn-primary" id="toggleMarker">Marker</button>
+        <button class="btn btn-primary" id="toggleHeatmap">Heatmap</button>
+      </div>
+
+      <div class="col">
+        <label class="col-form-label mr-3"> Field of operation: </label>
+        <select class="form-select-lg form-select">
+          <option value="all" selected>All</option>
+          <option value="Dyeing">Dyeing</option>
+          <option value="Exporting">Exporting</option>
+          <option value="Finishing">Finishing</option>
+          <option value="Ginning">Ginning</option>
+          <option value="Importing">Importing</option>
+          <option value="Knitting">Knitting</option>
+          <option value="Mail order selling">Mail order selling</option>
+          <option value="Manufacturing">Manufacturing</option>
+          <option value="Post harvest handling">Post harvest handling</option>
+          <option value="Printing">Printing</option>
+          <option value="Processing (other)">Processing (other)</option>
+          <option value="Retailing">Retailing</option>
+          <option value="Spinning">Spinning</option>
+          <option value="Storing">Storing</option>
+          <option value="Trading">Trading</option>
+          <option value="Weaving">Weaving</option>
+          <option value="Wet processing">Wet processing</option>
+        </select>
+      </div>
+
+      <div class="col">
+        <div class="ui-widget">
+          <label for="tags">Tags: </label>
+          <input id="tags" class="ml-3" type="text" />
+          <button id="showcompany" class="ml-3 btn btn-secondary">Show</button>
+        </div>
+      </div>
+
+
+      <div class="col">
+        <label class="col-form-label" id="companyCounter"></label>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="map"></div>
+  <script src="script.js"></script>
+</body>
+
+</html>
