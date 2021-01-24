@@ -1,2 +1,2 @@
-# GOTS-MAP
+# gots-map
 ![alt text](https://github.com/DeOldSax/GOTS-MAP/blob/main/screenshot.JPG?raw=true)
